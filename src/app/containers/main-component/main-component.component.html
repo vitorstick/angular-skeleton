@@ -1,0 +1,6 @@
+
+  <div class="main-component" *ngIf="abilities$ | async">
+    <div class="main-component__entry" *ngFor="let item of abilities$ | async">
+      <app-item-component [item]="item" (onSelect)="selectItem($event)"></app-item-component>
+    </div>
+  </div>
